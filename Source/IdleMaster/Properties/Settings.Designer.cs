@@ -232,9 +232,9 @@ namespace IdleMaster.Properties {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("False")]
-        public string maskGame {
+        public bool maskGame {
             get {
-                return ((string)(this["maskGame"]));
+                return ((bool)(this["maskGame"]));
             }
             set {
                 this["maskGame"] = value;
@@ -250,6 +250,21 @@ namespace IdleMaster.Properties {
             }
             set {
                 this["maskGameID"] = value;
+            }
+        }
+
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public int iMaskGameID
+        {
+            get
+            {
+                return ((int)(this["iMaskGameID"]));
+            }
+            set
+            {
+                this["iMaskGameID"] = value;
             }
         }
     }
