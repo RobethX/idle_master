@@ -153,6 +153,23 @@ namespace IdleMaster
         {
         chkShowUsername.Checked = true;
         }
+        
+        /*
+        if (Settings.Default.idleLessThan2)
+        {
+        chkIdleLessThan2.Checked = true;
+        }
+        
+        if (Settings.Default.maskGame)
+        {
+        chkMaskGame.Checked = false;
+        }
+        
+        if (Settings.Default.maskGameID)
+        {
+        chkMaskGameID.Default.value = "";
+        }
+        */
     }
 
     private void btnAdvanced_Click(object sender, EventArgs e)
