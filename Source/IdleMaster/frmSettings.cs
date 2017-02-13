@@ -59,6 +59,8 @@ namespace IdleMaster
         Settings.Default.minToTray = chkMinToTray.Checked;
         Settings.Default.ignoreclient = chkIgnoreClientStatus.Checked;
         Settings.Default.showUsername = chkShowUsername.Checked;
+        Settings.Default.maskGame = chkMaskGame.Checked;
+        Settings.Default.maskGameID = txtMaskGameID.Text;
         Settings.Default.Save();
         Close();
     }
@@ -113,6 +115,11 @@ namespace IdleMaster
         ttHints.SetToolTip(chkIgnoreClientStatus, localization.strings.ignore_client_status);
         chkShowUsername.Text = localization.strings.show_username;
         ttHints.SetToolTip(chkShowUsername, localization.strings.show_username);
+        // chkMaskGame.Text = localization.strings.mask_game;
+        // ttHints.SetToolTip(chkMaskGame, localization.strings.mask_game);
+        //chkMaskGame.Text = "Run a masking game";
+        //ttHints.SetToolTip(chkMaskGame, "Run a game first that shows on your profile to hide games idled");
+        // TODO: Add localization for mask game
         radOneGameOnly.Text = localization.strings.idle_individual;
         ttHints.SetToolTip(radOneGameOnly, localization.strings.idle_individual);
         radManyThenOne.Text = localization.strings.idle_simultaneous;
@@ -154,23 +161,20 @@ namespace IdleMaster
         chkShowUsername.Checked = true;
         }
         
-        /*
-        if (Settings.Default.idleLessThan2)
-        {
-        chkIdleLessThan2.Checked = true;
-        }
-        
         if (Settings.Default.maskGame)
         {
         chkMaskGame.Checked = false;
         }
-        
+        /*
         if (Settings.Default.maskGameID)
         {
-        chkMaskGameID.Default.value = "";
+        txtMaskGameID.Default.value = "";
         }
         */
-    }
+
+        Settings.Default.iMaskGameID = Convert.ToInt32(Settings.Default.maskGameID);
+
+        }
 
     private void btnAdvanced_Click(object sender, EventArgs e)
     {

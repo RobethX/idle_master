@@ -306,6 +306,17 @@ namespace IdleMaster
 
         public void StartMultipleIdle()
         {
+            // Start the mask game
+            if (Settings.Default.maskGame == true)
+            {
+                var GameID = Settings.Default.iMaskGameID;
+                if (GameID > 0 || GameID != null)
+                {
+                    CurrentBadge.AppId = GameID;
+                    CurrentBadge.Idle();
+                }
+            }
+
             UpdateIdleProcesses();
 
             // Update label controls
