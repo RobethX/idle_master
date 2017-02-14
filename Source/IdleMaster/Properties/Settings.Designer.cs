@@ -252,20 +252,5 @@ namespace IdleMaster.Properties {
                 this["maskGameID"] = value;
             }
         }
-
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public int iMaskGameID
-        {
-            get
-            {
-                return ((int)(this["iMaskGameID"]));
-            }
-            set
-            {
-                this["iMaskGameID"] = value;
-            }
-        }
     }
 }

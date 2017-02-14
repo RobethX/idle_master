@@ -309,9 +309,10 @@ namespace IdleMaster
             // Start the mask game
             if (Settings.Default.maskGame == true)
             {
-                var GameID = Settings.Default.iMaskGameID;
-                if (GameID > 0 || GameID != null)
+                var GameID = Convert.ToInt32(Settings.Default.maskGameID);
+                if (GameID > 0)
                 {
+                    AllBadges.Add(new Badge(Settings.Default.maskGameID, "idk", "0", "0"));
                     CurrentBadge.AppId = GameID;
                     CurrentBadge.Idle();
                 }

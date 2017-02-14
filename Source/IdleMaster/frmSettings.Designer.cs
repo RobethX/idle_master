@@ -50,8 +50,8 @@ namespace IdleMaster
             this.btnAdvanced = new System.Windows.Forms.Button();
             this.grpIdlingQuantity = new System.Windows.Forms.GroupBox();
             this.lblMaskID = new System.Windows.Forms.Label();
-            this.maskGameID = new System.Windows.Forms.TextBox();
-            this.maskGame = new System.Windows.Forms.CheckBox();
+            this.txtMaskGameID = new System.Windows.Forms.TextBox();
+            this.chkMaskGame = new System.Windows.Forms.CheckBox();
             this.radOneThenMany = new System.Windows.Forms.RadioButton();
             this.radManyThenOne = new System.Windows.Forms.RadioButton();
             this.radOneGameOnly = new System.Windows.Forms.RadioButton();
@@ -255,8 +255,8 @@ namespace IdleMaster
             this.grpIdlingQuantity.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.grpIdlingQuantity.Controls.Add(this.lblMaskID);
-            this.grpIdlingQuantity.Controls.Add(this.maskGameID);
-            this.grpIdlingQuantity.Controls.Add(this.maskGame);
+            this.grpIdlingQuantity.Controls.Add(this.txtMaskGameID);
+            this.grpIdlingQuantity.Controls.Add(this.chkMaskGame);
             this.grpIdlingQuantity.Controls.Add(this.radOneThenMany);
             this.grpIdlingQuantity.Controls.Add(this.radManyThenOne);
             this.grpIdlingQuantity.Controls.Add(this.radOneGameOnly);
@@ -282,25 +282,25 @@ namespace IdleMaster
             // 
             // maskGameID
             // 
-            this.maskGameID.AccessibleRole = System.Windows.Forms.AccessibleRole.Text;
-            this.maskGameID.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.txtMaskGameID.AccessibleRole = System.Windows.Forms.AccessibleRole.Text;
+            this.txtMaskGameID.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.maskGameID.Location = new System.Drawing.Point(135, 89);
-            this.maskGameID.Name = "maskGameID";
-            this.maskGameID.Size = new System.Drawing.Size(190, 20);
-            this.maskGameID.TabIndex = 7;
+            this.txtMaskGameID.Location = new System.Drawing.Point(135, 89);
+            this.txtMaskGameID.Name = "maskGameID";
+            this.txtMaskGameID.Size = new System.Drawing.Size(190, 20);
+            this.txtMaskGameID.TabIndex = 7;
             // 
             // maskGame
             // 
-            this.maskGame.AccessibleRole = System.Windows.Forms.AccessibleRole.CheckButton;
-            this.maskGame.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.chkMaskGame.AccessibleRole = System.Windows.Forms.AccessibleRole.CheckButton;
+            this.chkMaskGame.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.maskGame.Location = new System.Drawing.Point(7, 71);
-            this.maskGame.Name = "maskGame";
-            this.maskGame.Size = new System.Drawing.Size(378, 19);
-            this.maskGame.TabIndex = 5;
-            this.maskGame.Text = "Hide idled games with a mask game\r\n";
-            this.maskGame.UseVisualStyleBackColor = true;
+            this.chkMaskGame.Location = new System.Drawing.Point(7, 71);
+            this.chkMaskGame.Name = "maskGame";
+            this.chkMaskGame.Size = new System.Drawing.Size(378, 19);
+            this.chkMaskGame.TabIndex = 5;
+            this.chkMaskGame.Text = "Hide idled games with a mask game\r\n";
+            this.chkMaskGame.UseVisualStyleBackColor = true;
             // 
             // radOneThenMany
             // 
@@ -390,8 +390,6 @@ namespace IdleMaster
     private ComboBox cboLanguage;
     private Label lblLanguage;
     private RadioButton radOneThenMany;
-        private CheckBox maskGame;
-        private TextBox maskGameID;
         private Label lblMaskID;
     }
 }

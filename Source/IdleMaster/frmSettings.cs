@@ -61,6 +61,10 @@ namespace IdleMaster
         Settings.Default.showUsername = chkShowUsername.Checked;
         Settings.Default.maskGame = chkMaskGame.Checked;
         Settings.Default.maskGameID = txtMaskGameID.Text;
+        Console.Write(Settings.Default.maskGame);
+        Console.Write(chkMaskGame.Checked);
+        Console.Write(Settings.Default.maskGameID);
+        Console.Write(txtMaskGameID.Text);
         Settings.Default.Save();
         Close();
     }
@@ -117,8 +121,8 @@ namespace IdleMaster
         ttHints.SetToolTip(chkShowUsername, localization.strings.show_username);
         // chkMaskGame.Text = localization.strings.mask_game;
         // ttHints.SetToolTip(chkMaskGame, localization.strings.mask_game);
-        //chkMaskGame.Text = "Run a masking game";
-        //ttHints.SetToolTip(chkMaskGame, "Run a game first that shows on your profile to hide games idled");
+        // chkMaskGame.Text = "Run a masking game";
+        // ttHints.SetToolTip(chkMaskGame, "Run a game first that shows on your profile to hide games idled");
         // TODO: Add localization for mask game
         radOneGameOnly.Text = localization.strings.idle_individual;
         ttHints.SetToolTip(radOneGameOnly, localization.strings.idle_individual);
@@ -165,26 +169,16 @@ namespace IdleMaster
         {
         chkMaskGame.Checked = false;
         }
-        /*
-        if (Settings.Default.maskGameID)
-        {
-        txtMaskGameID.Default.value = "";
-        }
-        */
-
-        Settings.Default.iMaskGameID = Convert.ToInt32(Settings.Default.maskGameID);
-
-        }
-
-    private void btnAdvanced_Click(object sender, EventArgs e)
-    {
-      var frm = new frmSettingsAdvanced();
-      frm.ShowDialog();
     }
+
+        private void btnAdvanced_Click(object sender, EventArgs e)
+        {
+            var frm = new frmSettingsAdvanced();
+            frm.ShowDialog();
+        }
 
         private void label1_Click(object sender, EventArgs e)
         {
-
         }
     }
 }
