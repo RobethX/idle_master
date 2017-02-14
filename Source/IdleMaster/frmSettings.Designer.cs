@@ -49,11 +49,12 @@ namespace IdleMaster
             this.ttHints = new System.Windows.Forms.ToolTip(this.components);
             this.btnAdvanced = new System.Windows.Forms.Button();
             this.grpIdlingQuantity = new System.Windows.Forms.GroupBox();
+            this.lblMaskID = new System.Windows.Forms.Label();
+            this.maskGameID = new System.Windows.Forms.TextBox();
             this.maskGame = new System.Windows.Forms.CheckBox();
             this.radOneThenMany = new System.Windows.Forms.RadioButton();
             this.radManyThenOne = new System.Windows.Forms.RadioButton();
             this.radOneGameOnly = new System.Windows.Forms.RadioButton();
-            this.maskGameID = new System.Windows.Forms.CheckBox();
             this.grpGeneral.SuspendLayout();
             this.grpPriority.SuspendLayout();
             this.grpIdlingQuantity.SuspendLayout();
@@ -160,7 +161,7 @@ namespace IdleMaster
             this.grpPriority.Controls.Add(this.radIdleLeastDrops);
             this.grpPriority.Controls.Add(this.radIdleMostDrops);
             this.grpPriority.Controls.Add(this.radIdleDefault);
-            this.grpPriority.Location = new System.Drawing.Point(13, 239);
+            this.grpPriority.Location = new System.Drawing.Point(13, 247);
             this.grpPriority.Name = "grpPriority";
             this.grpPriority.Size = new System.Drawing.Size(392, 92);
             this.grpPriority.TabIndex = 1;
@@ -218,7 +219,7 @@ namespace IdleMaster
             // 
             this.btnCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnCancel.Location = new System.Drawing.Point(330, 339);
+            this.btnCancel.Location = new System.Drawing.Point(330, 347);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(75, 23);
             this.btnCancel.TabIndex = 2;
@@ -229,7 +230,7 @@ namespace IdleMaster
             // btnOK
             // 
             this.btnOK.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnOK.Location = new System.Drawing.Point(249, 339);
+            this.btnOK.Location = new System.Drawing.Point(249, 347);
             this.btnOK.Name = "btnOK";
             this.btnOK.Size = new System.Drawing.Size(75, 23);
             this.btnOK.TabIndex = 3;
@@ -241,7 +242,7 @@ namespace IdleMaster
             // 
             this.btnAdvanced.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnAdvanced.Image = global::IdleMaster.Properties.Resources.imgLock;
-            this.btnAdvanced.Location = new System.Drawing.Point(12, 339);
+            this.btnAdvanced.Location = new System.Drawing.Point(12, 347);
             this.btnAdvanced.Name = "btnAdvanced";
             this.btnAdvanced.Size = new System.Drawing.Size(25, 23);
             this.btnAdvanced.TabIndex = 4;
@@ -253,19 +254,41 @@ namespace IdleMaster
             // 
             this.grpIdlingQuantity.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.grpIdlingQuantity.Controls.Add(this.lblMaskID);
             this.grpIdlingQuantity.Controls.Add(this.maskGameID);
             this.grpIdlingQuantity.Controls.Add(this.maskGame);
             this.grpIdlingQuantity.Controls.Add(this.radOneThenMany);
             this.grpIdlingQuantity.Controls.Add(this.radManyThenOne);
             this.grpIdlingQuantity.Controls.Add(this.radOneGameOnly);
             this.grpIdlingQuantity.Location = new System.Drawing.Point(13, 124);
-            this.grpIdlingQuantity.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.grpIdlingQuantity.Margin = new System.Windows.Forms.Padding(2);
             this.grpIdlingQuantity.Name = "grpIdlingQuantity";
-            this.grpIdlingQuantity.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.grpIdlingQuantity.Size = new System.Drawing.Size(392, 110);
+            this.grpIdlingQuantity.Padding = new System.Windows.Forms.Padding(2);
+            this.grpIdlingQuantity.Size = new System.Drawing.Size(392, 118);
             this.grpIdlingQuantity.TabIndex = 5;
             this.grpIdlingQuantity.TabStop = false;
             this.grpIdlingQuantity.Text = "Idling Behavior";
+            // 
+            // lblMaskID
+            // 
+            this.lblMaskID.AutoSize = true;
+            this.lblMaskID.Location = new System.Drawing.Point(23, 92);
+            this.lblMaskID.Name = "lblMaskID";
+            this.lblMaskID.Size = new System.Drawing.Size(108, 13);
+            this.lblMaskID.TabIndex = 5;
+            this.lblMaskID.Text = "Masking game appid:";
+            this.lblMaskID.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblMaskID.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // maskGameID
+            // 
+            this.maskGameID.AccessibleRole = System.Windows.Forms.AccessibleRole.Text;
+            this.maskGameID.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.maskGameID.Location = new System.Drawing.Point(135, 89);
+            this.maskGameID.Name = "maskGameID";
+            this.maskGameID.Size = new System.Drawing.Size(190, 20);
+            this.maskGameID.TabIndex = 7;
             // 
             // maskGame
             // 
@@ -315,25 +338,13 @@ namespace IdleMaster
             this.radOneGameOnly.Text = "Idle each game individually";
             this.radOneGameOnly.UseVisualStyleBackColor = true;
             // 
-            // maskGameID
-            // 
-            this.maskGameID.AccessibleRole = System.Windows.Forms.AccessibleRole.Text;
-            this.maskGameID.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.maskGameID.Location = new System.Drawing.Point(7, 88);
-            this.maskGameID.Name = "maskGameID";
-            this.maskGameID.Size = new System.Drawing.Size(378, 19);
-            this.maskGameID.TabIndex = 7;
-            this.maskGameID.Text = "Mask game appid";
-            this.maskGameID.UseVisualStyleBackColor = true;
-            // 
             // frmSettings
             // 
             this.AcceptButton = this.btnOK;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnCancel;
-            this.ClientSize = new System.Drawing.Size(417, 374);
+            this.ClientSize = new System.Drawing.Size(417, 382);
             this.Controls.Add(this.grpIdlingQuantity);
             this.Controls.Add(this.btnAdvanced);
             this.Controls.Add(this.btnOK);
@@ -380,6 +391,7 @@ namespace IdleMaster
     private Label lblLanguage;
     private RadioButton radOneThenMany;
         private CheckBox maskGame;
-        private CheckBox maskGameID;
+        private TextBox maskGameID;
+        private Label lblMaskID;
     }
 }
