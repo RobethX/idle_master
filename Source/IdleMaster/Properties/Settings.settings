@@ -60,7 +60,7 @@
       <Value Profile="(Default)">False</Value>
     </Setting>
     <Setting Name="maskGameID" Type="System.String" Scope="User">
-      <Value Profile="(Default)" />
+      <Value Profile="(Default)">730</Value>
     </Setting>
   </Settings>
 </SettingsFile>

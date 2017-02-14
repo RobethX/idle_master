@@ -280,27 +280,29 @@ namespace IdleMaster
             this.lblMaskID.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.lblMaskID.Click += new System.EventHandler(this.label1_Click);
             // 
-            // maskGameID
+            // txtMaskGameID
             // 
             this.txtMaskGameID.AccessibleRole = System.Windows.Forms.AccessibleRole.Text;
             this.txtMaskGameID.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtMaskGameID.Enabled = false;
             this.txtMaskGameID.Location = new System.Drawing.Point(135, 89);
-            this.txtMaskGameID.Name = "maskGameID";
+            this.txtMaskGameID.Name = "txtMaskGameID";
             this.txtMaskGameID.Size = new System.Drawing.Size(190, 20);
             this.txtMaskGameID.TabIndex = 7;
             // 
-            // maskGame
+            // chkMaskGame
             // 
             this.chkMaskGame.AccessibleRole = System.Windows.Forms.AccessibleRole.CheckButton;
             this.chkMaskGame.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.chkMaskGame.Location = new System.Drawing.Point(7, 71);
-            this.chkMaskGame.Name = "maskGame";
+            this.chkMaskGame.Name = "chkMaskGame";
             this.chkMaskGame.Size = new System.Drawing.Size(378, 19);
             this.chkMaskGame.TabIndex = 5;
             this.chkMaskGame.Text = "Hide idled games with a mask game\r\n";
             this.chkMaskGame.UseVisualStyleBackColor = true;
+            this.chkMaskGame.CheckedChanged += new System.EventHandler(this.chkMaskGame_CheckStateChanged);
             // 
             // radOneThenMany
             // 

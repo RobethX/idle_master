@@ -61,10 +61,6 @@ namespace IdleMaster
         Settings.Default.showUsername = chkShowUsername.Checked;
         Settings.Default.maskGame = chkMaskGame.Checked;
         Settings.Default.maskGameID = txtMaskGameID.Text;
-        Console.Write(Settings.Default.maskGame);
-        Console.Write(chkMaskGame.Checked);
-        Console.Write(Settings.Default.maskGameID);
-        Console.Write(txtMaskGameID.Text);
         Settings.Default.Save();
         Close();
     }
@@ -167,9 +163,14 @@ namespace IdleMaster
         
         if (Settings.Default.maskGame)
         {
-        chkMaskGame.Checked = false;
+        chkMaskGame.Checked = true;
         }
-    }
+
+        if (Settings.Default.maskGame)
+        {
+        txtMaskGameID.Text = "730";
+        }
+        }
 
         private void btnAdvanced_Click(object sender, EventArgs e)
         {
@@ -179,6 +180,11 @@ namespace IdleMaster
 
         private void label1_Click(object sender, EventArgs e)
         {
+        }
+
+        private void chkMaskGame_CheckStateChanged(object sender, EventArgs e)
+        {
+            txtMaskGameID.Enabled = (chkMaskGame.CheckState == CheckState.Checked);
         }
     }
 }

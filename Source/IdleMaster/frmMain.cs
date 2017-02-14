@@ -174,6 +174,7 @@ namespace IdleMaster
                         {
                             if (argList[1] + "\\" + argList[0] == username)
                             {
+                                Console.Write("process kill");
                                 process.Kill();
                             }
                         }
