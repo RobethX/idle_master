@@ -313,7 +313,8 @@ namespace IdleMaster
                 var GameID = Convert.ToInt32(Settings.Default.maskGameID);
                 if (GameID > 0)
                 {
-                    AllBadges.Add(new Badge(Settings.Default.maskGameID, "idk", "0", "0"));
+                    // AllBadges.Add(new Badge(Settings.Default.maskGameID, "Masking Game", "0", "0"));
+
                     CurrentBadge.AppId = GameID;
                     CurrentBadge.Idle();
                 }
@@ -553,7 +554,17 @@ namespace IdleMaster
                 }
                 else
                 {
-                    AllBadges.Add(new Badge(appid, name, cards, hours));
+                    if (Settings.Default.onlyIdlePlayed == true)
+                    {
+                        if (Convert.ToInt32(hours) > 0)
+                        {
+                            AllBadges.Add(new Badge(appid, name, cards, hours));
+                        }
+                    }
+                    else
+                    {
+                        AllBadges.Add(new Badge(appid, name, cards, hours));
+                    }
                 }
             }
         }

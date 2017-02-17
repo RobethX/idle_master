@@ -252,5 +252,17 @@ namespace IdleMaster.Properties {
                 this["maskGameID"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool onlyIdlePlayed {
+            get {
+                return ((bool)(this["onlyIdlePlayed"]));
+            }
+            set {
+                this["onlyIdlePlayed"] = value;
+            }
+        }
     }
 }
